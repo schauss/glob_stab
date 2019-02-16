@@ -1,0 +1,25 @@
+These examples were taken from
+
+Fabien Lescher and Clement Roos:
+Robust stability of time-delay systems with structured uncertainties:
+a mu-analysis based algorithm
+CDC-ECC, 2011
+
+and are systems of the form
+
+dx = A0*x(t) + \sum_{k=1}^N A_k*x(t-\tau_k)
+
+the problem solved in the reference was: find maximum delay \tau so
+that system is stable for all delta_i=[-1,1].
+
+* Example 1:
+  For this example we determine stability in the delta-tau plane for
+  different ranges of delay and different resolutions. Interestingly,
+  the system is also stable for delays around 8 seconds for delta
+  close to -1.
+* Example 2:
+  In this cases we determine the admissible time delay for different
+  ranges of delay. Then, we determine the admissible delay depending
+  on the maximum magnitude of all delta_i using the inputs
+  lescher2011_ex2_delta_max.*.
+

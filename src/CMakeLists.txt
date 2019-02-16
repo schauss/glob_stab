@@ -1,0 +1,5 @@
+add_subdirectory(tools)
+add_subdirectory(math)
+add_subdirectory(parser)
+add_subdirectory(optimization)
+add_subdirectory(glob_stab)

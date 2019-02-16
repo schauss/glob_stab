@@ -1,0 +1,25 @@
+This example is taken from
+
+Schauss, T., Peer, A., Buss, M. (2017)
+Parameter-Space Stability Analysis of LTI Time-Delay Systems with Parametric Uncertainties
+IEEE Transactions on Automatic Control.
+
+where some of the results calculated here are presented.
+
+The system and parameters were taken from
+
+Ackermann, J., & Blue, P. (2002).
+Robust Control: The Parameter Space Approach.
+Springer.
+
+where the delay-free case was used as one of the main examples. Then, one or two delays were
+added to the system.
+
+The different examples may be run using the following scripts:
+* `run.sh`: Examples without time delay. In contrast to the results in Ackermann2002 this
+  includes parameterizations where we map stability to the two-dimensional parameter space
+  while to other paramters are intervals.
+* `run_td.sh`: Examples with one time delay.
+* `run_2td.sh`: Examples with two incommensurate time delays.
+* `run_delta_01: Examples with no time delay and a specified minimum damping (not applicable
+  to the case with delays and program option `-s1`.

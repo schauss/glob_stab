@@ -1,0 +1,34 @@
+Results for this example are shown in
+
+Schauss, T., Peer, A., Buss, M. (2017)
+Parameter-Space Stability Analysis of LTI Time-Delay Systems with Parametric Uncertainties
+IEEE Transactions on Automatic Control.
+
+The delay-free version of this example is given in
+
+Husek, P. (2008).
+Robust Stability of Polynomic Interval Polynomials.
+In C. Myung (Ed.), IFAC World Congress (Vol. 2, pp. 5862–5867).
+
+which in turn took it from
+
+Ackermann, J., & Blue, P. (1993).
+Robust Control: The Parameter Space Approach.
+Springer.
+
+The transfer functions for plant and controller are taken from Hussek2008. A delay is then
+added to the feedback-path and the overall transfer function is determined using the
+Python-script husek2008_citybus.py.
+
+We then evaluate stability for different delays in the environment plane. As a final step
+we determine stability in the delay-velocity plane where the bus-mass is within a given
+interval! This evaluation takes very long (~2.5 h on an Intel Core2Duo P8400@2.26GHz)!
+However, I am not aware of any other method which could solve this problem
+non-conservatively and rigorously at all!
+
+Notes:
+* The transfer function depends on the uncertain parameters polynomially in this case!
+* I obtain different transfer functions if I determine them based on the
+  "Parameter-Space" book (I only have the 2002 version of the book and there may have been
+  some changes).
+

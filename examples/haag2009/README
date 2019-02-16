@@ -1,0 +1,39 @@
+These examples were taken from
+
+Thomas Haag, Ulrich Münz, Frank Allgöwer:
+Comparison of Different Stability Conditions for Linear Time-Delay
+Systems with Incommensurate Delays, 2009
+
+These are time-delay systems without parametric uncertainties
+(except for the delay) given by 
+
+dx = A0*x(t) + \sum_{k=1}^N A_k*x(t-\tau_k)
+
+The problem solved in that publication was to find the maximum
+admissible delay \bar{\tau} so that all \tau_k < \bar{\tau}.
+
+For all the problems with two delays (4-8) we instead search
+for stable regions in the 2d delay space. 
+For example 9 with three delays we solve the same problem as in
+Haag2009, i.e., we determine the maximum \tau for all delays.
+
+Notes:
+* Example one represents a special case which is marginally stable
+  due to a root touching the imaginary axis for a delay-value of
+  pi (the root is left of the imaginary axis for delays around pi).
+  Stability can only be examined in this case if we shift the
+  stability boundary slightly to the left half-plane which results
+  in some stability robustness. This is done here by a value of
+  epsilon.
+* The same is done for example two (although it is not necessary
+  for that example). This evaluates the location of the right-most
+  root with respect to the time delay.
+* For all cases the option `--tm_order 3` is set to limit the
+  maximum order of the Taylor Model to three. In these cases this
+  results in a faster evaluation.
+* Mapping the stability boundaries to the delay space is much
+  faster than evaluating stability of disjoint regions for most
+  examples given here. Call `run_boundary_only.sh` to only map
+  the imaginary axis to the parameter space and not check stability
+  of disjoint regions. Note, that this is also what is done in the
+  publication from which these examples are taken.

@@ -1,0 +1,4 @@
+z1 = exp(-T_d1*s)*exp(T_d1*epsilon);
+chEq[0] = -epsilon-epsilon*z1+epsilon*epsilon+1.0;
+chEq[1] = z1-epsilon*2.0+1.0;
+chEq[2] = 1.0;

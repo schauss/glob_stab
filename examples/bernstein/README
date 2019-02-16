@@ -1,0 +1,49 @@
+The examples in this directory are taken from publications on the Bernstein
+branch and bound algorithm and are therefore all delay free. They are used
+to verify the functionality of the implemented algorithm for the delay-free
+case.
+
+The publications from which the examples are taken are indicated in the
+filenames:
+
+* zettler1998:
+  Zettler, M., & Garloff, J. (1998).
+  Robustness analysis of polynomials with polynomial parameter dependency using Bernstein expansion.
+  IEEE Transactions on Automatic Control, 43(3), 425–431.
+
+* garloff1999:
+  Garloff, J., & Graf, B. (1999).
+  Solving strict polynomial inequalities by Bernstein expansion.
+  In N. Munro (Ed.), The Use of Symbolic Methods in Control System Analysis and Design (pp. 339–352).
+  The Institution of Electrical Engineers (IEE), London.
+
+* garloff2000:
+  Garloff, J. (2000).
+  Application of bernstein expansion to the solution of control problems.
+  Reliable Computing, 6(3), 303–320.
+
+The files ending in .eq represent inequality constraints which are necessary
+and sufficient for stability and were determined using the Liénard-Chipart
+criterion. They are evaluated using the program option `-s0` when `run_eq.sh`
+us called.
+
+All other examples (files ending in .chEq) are evaluated using the value-set
+approach when `run.sh` is called (including a stability check for disjoint
+regions) or `run_boundary_only.sh` for boundary mapping only.
+
+Computation times are rather long compared to the results obtained in these
+old publications (considering the processor used at the time). This is
+due to several reasons:
+* Out implementation is more complex, i.e., the characteristic equation and
+  value set are represented as Taylor Models which in turn have a Bernstein
+  polynomial.
+* The polynomial coefficients are intervals in our case which is much more
+  complex than considering double-values.
+* We consider the complete imaginary axis for boundary mapping which is not
+  really necessary for the value-set approach as described in zettler1998.
+* When calling `run.sh` we evaluate the stability of disjoint regions after
+  mapping the boundary to the paramter space which is not done in zettler1998.
+* For several examples we determine stable regions in the parameter space
+  instead of only checking whether the system is stable for a given set of
+  intervals. This introduces another level of complexity into our branch and
+  bound algorithm.

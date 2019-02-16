@@ -1,0 +1,11 @@
+mc=5;
+k1=1;
+k4=2;
+g=10;
+z1 = exp(-T_d1*s);
+z2 = exp(-T_d2*s);
+chEq[0]=k1*z1*g;
+chEq[1]=k_2*z1*g;
+chEq[2]=(ml+mc)*g+k1*z1*l-k_3*z1*z2;
+chEq[3]=k_2*z1*l-k4*z1*z2;
+chEq[4]=l*mc;

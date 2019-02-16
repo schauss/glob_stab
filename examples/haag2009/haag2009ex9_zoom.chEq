@@ -1,0 +1,5 @@
+z1 = exp(-a1*T_d*s);
+z2 = exp(-a2*T_d*s);
+z3 = exp(-a3*T_d*s);
+chEq[0] = z1*4.0+z2*3.0+z3+2.0;
+chEq[1] = 1.0;
