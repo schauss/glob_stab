@@ -1,7 +1,8 @@
 Documentation of glob_stab               {#mainpage}
 ==========================
 This is an implementation of the stability analysis algorithm presented in
-\cite Schauss2017. The method is explained in the following section.
+\cite Schauss2018 and \cite Schauss2017. The method is explained in the following
+section.
 
 Abstract from paper
 -------------------
